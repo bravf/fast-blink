@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "deep-object-diff": "^1.1.0",
+    "js-deep-diff": "^1.0.1",
+    "lodash": "^4.17.15",
+    "variable-diff": "^2.0.1"
+  }
+}
