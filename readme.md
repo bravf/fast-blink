@@ -1,5 +1,10 @@
 ## 一种快照技术
 
+### Install
+```
+npm install --save fast-blink
+```
+
 ### Basic usage:
 ```javascript
 var data = {
