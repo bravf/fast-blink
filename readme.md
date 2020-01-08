@@ -22,40 +22,41 @@ var data = {
 var print = (object) => console.log(JSON.stringify(object), '\n')
 print(data)
 
-var mySnapshot = new Snapshot(data ,10)
+var {FastBlink} = require('fast-blink')
+var myFastBlink = new FastBlink(data ,10)
 data.foo.bar.b = 3
-mySnapshot.push()
+myFastBlink.push()
 print('push:')
 print(data)
 
 data.foo.bar.a[2] = 100
 data.foo.bar.c[2] = 'z'
 data.buzz = 'world'
-mySnapshot.push()
+myFastBlink.push()
 print('push:')
 print(data)
 
 print('records:')
-print(mySnapshot.records)
+print(myFastBlink.records)
 
 print('undo:')
-mySnapshot.undo()
+myFastBlink.undo()
 print(data)
 
 print('undo:')
-mySnapshot.undo()
+myFastBlink.undo()
 print(data)
 
 print('redo:')
-mySnapshot.redo()
+myFastBlink.redo()
 print(data)
 
 print('redo:')
-mySnapshot.redo()
+myFastBlink.redo()
 print(data)
 
 print('undo:')
-mySnapshot.undo()
+myFastBlink.undo()
 print(data)
 
 ```
